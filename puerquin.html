@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anime Zone</title>
+	<style>
+		:root {
+			--fondo: #10131f;
+			--panel: #191d2d;
+			--texto: #f4f1ff;
+			--muted: #a7a4b8;
+			--acento: #ff6b8a;
+			--acento-secundario: #65d8c0;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: var(--fondo);
+			color: var(--texto);
+			font-family: Arial, sans-serif;
+			line-height: 1.5;
+		}
+
+		header {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin: 0 auto;
+			max-width: 1100px;
+			padding: 24px 28px;
+		}
+
+		.logo {
+			color: var(--acento);
+			font-size: 1.5rem;
+			font-weight: 800;
+			letter-spacing: 1px;
+		}
+
+		nav a {
+			color: var(--texto);
+			margin-left: 22px;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			color: var(--acento-secundario);
+		}
+
+		.hero {
+			background: linear-gradient(120deg, #27233e, #172d38);
+			border-radius: 18px;
+			margin: 20px auto 56px;
+			max-width: 1100px;
+			padding: 76px 48px;
+		}
+
+		.hero h1 {
+			font-size: clamp(2.4rem, 6vw, 5rem);
+			line-height: 1;
+			max-width: 650px;
+		}
+
+		.hero p {
+			color: var(--muted);
+			font-size: 1.1rem;
+			margin: 22px 0;
+			max-width: 520px;
+		}
+
+		.boton {
+			background: var(--acento);
+			border: 0;
+			border-radius: 8px;
+			color: #20111a;
+			cursor: pointer;
+			display: inline-block;
+			font-weight: bold;
+			padding: 12px 20px;
+			text-decoration: none;
+		}
+
+		main {
+			margin: 0 auto;
+			max-width: 1100px;
+			padding: 0 28px 50px;
+		}
+
+		h2 {
+			margin-bottom: 18px;
+		}
+
+		.anime-grid {
+			display: grid;
+			gap: 20px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.anime-card {
+			background: var(--panel);
+			border: 1px solid #292e43;
+			border-radius: 12px;
+			overflow: hidden;
+		}
+
+		.portada {
+			align-items: end;
+			background: linear-gradient(135deg, #ff758c, #6c5ce7);
+			display: flex;
+			font-size: 3rem;
+			height: 170px;
+			justify-content: center;
+			padding-bottom: 14px;
+		}
+
+		.anime-card:nth-child(2) .portada {
+			background: linear-gradient(135deg, #24c6dc, #514a9d);
+		}
+
+		.anime-card:nth-child(3) .portada {
+			background: linear-gradient(135deg, #f7971e, #e83e8c);
+		}
+
+		.anime-info {
+			padding: 18px;
+		}
+
+		.anime-info p {
+			color: var(--muted);
+			margin: 7px 0 16px;
+		}
+
+		footer {
+			border-top: 1px solid #292e43;
+			color: var(--muted);
+			padding: 22px;
+			text-align: center;
+		}
+
+		@media (max-width: 700px) {
+			header {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 14px;
+			}
+
+			nav a {
+				margin-left: 0;
+				margin-right: 16px;
+			}
+
+			.hero {
+				border-radius: 0;
+				margin-top: 0;
+				padding: 58px 28px;
+			}
+
+			.anime-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">ANIME ZONE</div>
+		<nav aria-label="Navegacion principal">
+			<a href="#inicio">Inicio</a>
+			<a href="#series">Series</a>
+			<a href="#contacto">Contacto</a>
+		</nav>
+	</header>
+
+	<section class="hero" id="inicio">
+		<h1>Tu mundo anime empieza aqui</h1>
+		<p>Descubre historias, personajes y aventuras que te acompanaran en cada episodio.</p>
+		<a class="boton" href="#series">Explorar series</a>
+	</section>
+
+	<main>
+		<section id="series">
+			<h2>Series destacadas</h2>
+			<div class="anime-grid">
+				<article class="anime-card">
+					<div class="portada" aria-hidden="true">&#9733;</div>
+					<div class="anime-info">
+						<h3>Neon Dreams</h3>
+						<p>Accion y ciencia ficcion en una ciudad llena de misterios.</p>
+						<a class="boton" href="#contacto">Ver detalles</a>
+					</div>
+				</article>
+				<article class="anime-card">
+					<div class="portada" aria-hidden="true">&#9834;</div>
+					<div class="anime-info">
+						<h3>Spirit Academy</h3>
+						<p>Amistad, magia y retos dentro de una academia especial.</p>
+						<a class="boton" href="#contacto">Ver detalles</a>
+					</div>
+				</article>
+				<article class="anime-card">
+					<div class="portada" aria-hidden="true">&#10024;</div>
+					<div class="anime-info">
+						<h3>Samurai Moon</h3>
+						<p>Una aventura legendaria de honor, valor y destino.</p>
+						<a class="boton" href="#contacto">Ver detalles</a>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer id="contacto">Anime Zone | Hecho para fans del anime</footer>
+</body>
+</html>
